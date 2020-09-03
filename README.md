@@ -2,6 +2,8 @@
 
 Codeforces is a website that hosts competitive programming contests. It is maintained by a group of competitive programmers from ITMO University led by Mikhail Mirzayanov. Since 2013, Codeforces claims to surpass Topcoder in terms of active contestants. As of 2018, it has over 600,000 registered users. Codeforces along with other similar websites are used by top sport programmers like Gennady Korotkevich, Petr Mitrichev, Benjamin Qi and Makoto Soejima, and by other programmers interested in furthering their careers.
 
+<table><tbody><tr><td colspan="2" style="text-align:center"><a href="/wiki/File:Codeforces_logo.png" class="image"><img alt="Codeforces logo.png" src="https://www.github.com/CormacKrum/blob/master/Codeforces_logo.png" decoding="async" width="250" height="54" srcset="//upload.wikimedia.org/wikipedia/en/0/07/Codeforces_logo.png 1.5x" data-file-width="300" data-file-height="65"></a></td></tr><tr><th scope="row"><div style="display:inline-block; padding:0.1em 0;line-height:1.2em;">Type of site</div></th><td><a href="/wiki/Competitive_programming" title="Competitive programming">Competitive programming</a></td></tr><tr><th scope="row">Available&nbsp;in</th><td>English, Russian</td></tr><tr><th scope="row">Owner</th><td>Mike Mirzayanov</td></tr><tr><th scope="row">Created&nbsp;by</th><td>Mike Mirzayanov</td></tr><tr><th scope="row">URL</th><td class="url"><span class="url"><a rel="nofollow" class="external text" href="https://codeforces.com/">codeforces<wbr>.com</a></span></td></tr><tr><th scope="row"><a href="/wiki/Alexa_Internet" title="Alexa Internet">Alexa</a> rank</th><td>6,660<sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></td></tr><tr><th scope="row"><a href="/wiki/Registered_user" title="Registered user">Users</a></th><td>600,000</td></tr><tr><th scope="row">Launched</th><td>April&nbsp;10,&nbsp;2009<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2009-04-10</span>)</span></td></tr><tr><th scope="row">Current&nbsp;status</th><td class="category">Active</td></tr></tbody></table>
+
 
 # Overview
 
@@ -18,6 +20,7 @@ Contestants are rated by a system similar to Elo rating system. There are usuall
 
 Contestants are divided into ranks based on their ratings. Since May 2018, users with ratings between 1900 and 2099 can be rated in both Div. 1 and Div. 2 contests. At the same time, Div. 3 was created for users rated below 1600. The table below was up-to-date on 2018-12-26.
 
+<br/>
 <table class="wikitable">
 <tbody><tr>
 <th>Rating Bounds
