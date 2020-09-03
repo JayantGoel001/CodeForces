@@ -83,6 +83,9 @@
 		<Unit filename="C:/Users/jgoel/CLionProjects/CodeForces/ArrayWithOddSum.cpp">
 			<Option target="."/>
 		</Unit>
+		<Unit filename="C:/Users/jgoel/CLionProjects/CodeForces/BlackSquare.cpp">
+			<Option target="."/>
+		</Unit>
 		<Unit filename="C:/Users/jgoel/CLionProjects/CodeForces/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
