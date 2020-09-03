@@ -3,3 +3,21 @@
 
 CMakeFiles/..dir/AgainTwentyFive.cpp.obj: ../AgainTwentyFive.cpp
 
+CMakeFiles/..dir/CombinationLock.cpp.obj: ../CombinationLock.cpp
+
+CMakeFiles/..dir/CopyCopyCopyCopyCopy.cpp.obj: ../CopyCopyCopyCopyCopy.cpp
+
+CMakeFiles/..dir/EpicGame.cpp.obj: ../EpicGame.cpp
+
+CMakeFiles/..dir/LCMProblem.cpp.obj: ../LCMProblem.cpp
+
+CMakeFiles/..dir/MinutesBeforeTheNewYear.cpp.obj: ../MinutesBeforeTheNewYear.cpp
+
+CMakeFiles/..dir/NightAtTheMuseum.cpp.obj: ../NightAtTheMuseum.cpp
+
+CMakeFiles/..dir/OmkarAndCompletion.cpp.obj: ../OmkarAndCompletion.cpp
+
+CMakeFiles/..dir/SerejaAndDima.cpp.obj: ../SerejaAndDima.cpp
+
+CMakeFiles/..dir/SoftDrinking.cpp.obj: ../SoftDrinking.cpp
+
