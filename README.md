@@ -3,7 +3,7 @@
 Codeforces is a website that hosts competitive programming contests. It is maintained by a group of competitive programmers from ITMO University led by Mikhail Mirzayanov. Since 2013, Codeforces claims to surpass Topcoder in terms of active contestants. As of 2018, it has over 600,000 registered users. Codeforces along with other similar websites are used by top sport programmers like Gennady Korotkevich, Petr Mitrichev, Benjamin Qi and Makoto Soejima, and by other programmers interested in furthering their careers.
 
 <table><tbody><tr><td colspan="2" style="text-align:center">
-  <img alt="Codeforces logo.png" src="https://www.github.com/CormacKrum/CodeForces/blob/master/Codeforces_logo.png" decoding="async" width="250" height="54" data-file-width="300" data-file-height="65"></td></tr><tr>
+  <img alt="Codeforces logo.png" src="https://github.com/CormacKrum/CodeForces/blob/master/Codeforces_logo.png" decoding="async" width="250" height="54" data-file-width="300" data-file-height="65"></td></tr><tr>
   <th scope="row">
   <div style="display:inline-block; padding:0.1em 0;line-height:1.2em;">Type of site</div>
   </th>
