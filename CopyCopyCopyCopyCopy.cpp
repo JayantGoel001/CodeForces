@@ -1,5 +1,4 @@
 #include<iostream>
-#include<string>
 #include<set>
 using namespace std;
 int main(){
@@ -9,7 +8,7 @@ int main(){
         int x;
         cin>>x;
         set<int> s;
-        for(int i=0;i<x;i++){
+        for(auto j=0; j < x; j++){
             int ele;
             cin>>ele;
             s.insert(ele);
