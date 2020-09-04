@@ -17,7 +17,7 @@ int main(){
             sum+=ar[j];
         }
 
-        if((n%2==1 && oddNum%2==1) || sum%2==1){
+        if((oddNum!=n) && oddNum>=1 || sum%2==1){
             cout<<"YES"<<endl;
         } else{
             cout<<"NO"<<endl;
