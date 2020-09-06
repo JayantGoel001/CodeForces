@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 int main(){
@@ -10,7 +9,7 @@ int main(){
             cout<<i;
             break;
         }else if(i*(i+1)*(i+2)>6*n){
-            cout<<i;
+            cout<<i-1;
             break;
         }
     }
