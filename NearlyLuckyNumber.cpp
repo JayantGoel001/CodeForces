@@ -13,19 +13,24 @@ int main(){
             count++;
         }
     }
-    bool isLucky = true;
-    for (int i = count; i !=0; i=i/10) {
-        int x= i%10;
-        if (x== 4 or x==7){
-
-        }else{
-            isLucky= false;
-            cout<<"NO";
-            break;
-        }
+    if(count==0){
+        cout<<"NO";
     }
-    if (isLucky){
-        cout<<"YES";
+    else {
+        bool isLucky = true;
+        for (int i = count; i != 0; i = i / 10) {
+            int x = i % 10;
+            if (x == 4 or x == 7) {
+
+            } else {
+                isLucky = false;
+                cout << "NO";
+                break;
+            }
+        }
+        if (isLucky) {
+            cout << "YES";
+        }
     }
 
 }
