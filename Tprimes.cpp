@@ -19,11 +19,10 @@ int main(){
     int t;
     cin>>t;
     for (int i = 0; i < t; ++i) {
-        long int x;
+        long long int x;
         cin>>x;
-        int root_x = sqrt(x);
-
-        if(root_x*root_x == x){
+        long int root_x = sqrt(x);
+        if(root_x == x/root_x){
             if(isPrime[root_x]){
                 cout<<"YES\n";
             }else{
