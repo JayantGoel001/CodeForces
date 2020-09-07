@@ -22,7 +22,7 @@ int main(){
         long long int x;
         cin>>x;
         long int root_x = sqrt(x);
-        if(root_x == x/root_x){
+        if(pow(root_x,2) == x){
             if(isPrime[root_x]){
                 cout<<"YES\n";
             }else{
