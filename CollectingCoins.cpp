@@ -6,7 +6,7 @@ int main(){
     for (int i = 0; i < t; ++i) {
         int a,b,c,n;
         cin>>a>>b>>c>>n;
-        if(max(a,max(b,c))<n && (a+b+c+n)%3==0){
+        if(max(a,max(b,c))-min(a,min(b,c))<n && (a+b+c+n)%3==0){
             cout<<"YES\n";
         }
         else{
