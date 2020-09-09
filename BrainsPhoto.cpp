@@ -12,16 +12,23 @@ int main(){
             cin>>ar[i][j];
         }
     }
-
+    bool colored = false;
     for (int i = 0; i <n; ++i) {
         for (int j = 0; j < m; ++j) {
             if(isColored(ar[i][j])){
+                colored = true;
                 cout<<"#Color\n";
-                return -1;
+                break;
             }
         }
+        if (colored){
+            break;
+        }
     }
-    cout << "#Black&White" << "\n";
+    if (!colored){
+        cout<<"#Black&White"<<"\n";
+    }
+
 }
 
 bool isColored(char i) {
