@@ -13,13 +13,13 @@ int main(){
         cin>>n>>k;
         int *ar = new int[n];
         int *br = new int[n];
-        int max = INT16_MIN;
+        int min = INT16_MAX;
         int sum = 0;
 
         for (int j = 0; j < n; ++j) {
             cin>>ar[j];
-            if(max<ar[j]){
-                max= ar[j];
+            if(min>ar[j]){
+                min= ar[j];
             }
             sum+=ar[j];
         }
@@ -31,20 +31,27 @@ int main(){
         sort(br,br+n);
         vector<int> v;
         for (int j = 0; j < n; ++j) {
-            if(br[j]>max){
+            if(br[j]>min){
                 v.push_back(br[j]);
             }
         }
         int j=0;
+        int maxSum = sum;
         while (k!=0 && !v.empty()){
             sum+=v[v.size()-1];
             v.pop_back();
             sum-=ar[j];
+            if(sum>maxSum){
+                maxSum = sum;
+            }
             j++;
             k--;
         }
-        cout<<sum<<"\n";
+        cout<<maxSum<<"\n";
 
 
     }
+    //2 2
+    //1 4
+    //3 2
 }
