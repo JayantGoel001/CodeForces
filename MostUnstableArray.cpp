@@ -6,17 +6,14 @@ int main(){
     int t;
     cin>>t;
     for (int i = 0; i <t; ++i) {
-        int n,m;
+        long long int n,m;
         cin>>n>>m;
         if (n==1){
             cout<<"0\n";
-        } else if(n==2 || n==3){
+        } else if(n==2){
             cout<<m<<"\n";
-        } else if (n==m){
+        } else {
             cout<<2*m<<"\n";
-        }
-        else{
-            cout<<m*(n-1)/2<<"\n";
         }
     }
 }
