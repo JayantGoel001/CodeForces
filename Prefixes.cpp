@@ -15,9 +15,11 @@ int main(){
     for (int i = 0; i < n; i+=2) {
         if (str[i]==str[i+1]){
             count++;
-            string1 = string1+ m[str[i]] + str[i+1];
+            string1.append(1,m[str[i]]);
+            string1.append(1,str[i+1]);
         } else{
-            string1 = string1 + str[i] +str[i+1];
+            string1.append(1,str[i]);
+            string1.append(1,str[i+1]);
         }
     }
     cout<<count<<"\n";
