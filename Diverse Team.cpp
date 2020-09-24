@@ -17,7 +17,11 @@ int main(){
     if (k<=m.size()){
         cout<<"YES\n";
         for (auto it=m.begin();it!=m.end();it++){
+            if (k==0){
+                break;
+            }
             cout<<(it->second).front()<<" ";
+            k--;
         }
     } else{
         cout<<"NO\n";
