@@ -20,7 +20,7 @@ int main(){
         }else{
             n = n-11;
             int index = str.find('8');
-            if (index<n){
+            if (index!=string::npos && index<=n){
                 cout<<"YES\n";
             }else{
                 cout<<"NO\n";
