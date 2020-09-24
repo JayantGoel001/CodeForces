@@ -1,4 +1,4 @@
 cmake_minimum_required(VERSION 3.13)
 project(..)
 set(CMAKE_CXX_STANDARD 14)
-add_executable(. "Pens and Pencils.cpp")
+add_executable(. "New Year and the Christmas Ornament.cpp")
