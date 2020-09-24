@@ -8,12 +8,12 @@ int main(){
     cin>>n;
     cin>>str;
     int *ar = new int[10];
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < 10; ++i) {
         ar[i]=0;
     }
     for (int i = 0; i < n; ++i) {
         if (str[i]=='L'){
-            for (int j = 0; j < 9; ++j) {
+            for (int j = 0; j < 10; ++j) {
                 if (ar[j]==0){
                     ar[j]=1;
                     break;
