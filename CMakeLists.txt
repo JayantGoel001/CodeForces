@@ -1,4 +1,4 @@
 cmake_minimum_required(VERSION 3.13)
 project(..)
 set(CMAKE_CXX_STANDARD 14)
-add_executable(. "Mishka and Contest.cpp")
+add_executable(. "Omkar and Infinity Clock.cpp")
