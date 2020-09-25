@@ -12,6 +12,6 @@ int main(){
             cin>>x;
             sum+=x;
         }
-        cout<<m<<"\n";
+        cout<<min(sum,m)<<"\n";
     }
 }
