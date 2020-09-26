@@ -11,20 +11,21 @@ int main(){
         string str;
         cin>>str;
         int index = str.find('A');
-        if (index!=string::npos){
-            str = str.substr(index,n-index);
-        }
-        int maxi =0;
-        int countP = 0;
-        for (int j = 0; j < str.length(); ++j) {
-            if (str[j]=='A'){
-                maxi= max(maxi,countP);
-                countP=0;
+        if (index!=string::npos) {
+            str = str.substr(index, n - index);
+            int maxi = 0;
+            int countP = 0;
+            for (int j = 0; j < str.length(); ++j) {
+                if (str[j] == 'A') {
+                    maxi = max(maxi, countP);
+                    countP = 0;
+                } else {
+                    countP++;
+                }
             }
-            else{
-                countP++;
-            }
+            cout << max(maxi, countP) << "\n";
+        }else{
+            cout<<"0\n";
         }
-        cout<<max(maxi,countP)<<"\n";
     }
 }
