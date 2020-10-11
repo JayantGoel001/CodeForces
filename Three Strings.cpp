@@ -14,7 +14,7 @@ int main(){
         int len = a.length();
         bool isPossible = true;
         for (int j = 0; j < len; ++j) {
-            if (a[j]==b[j] || (a[j]!=c[j] && b[j]!=c[j])){
+            if (a[j]!=c[j] && b[j]!=c[j]){
                 cout<<"NO\n";
                 isPossible= false;
                 break;
