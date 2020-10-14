@@ -1,6 +1,8 @@
 #include <iostream>
+#include <memory.h>
+
 using namespace std;
-bool containsStrawberry(char **grid,int x,int rc,bool type){
+bool containsStrawberry(char **grid,int x,int rc,int type){
     if (type==0){
         for (int i = 0; i < rc; ++i) {
             if (grid[x][i]=='S'){
@@ -29,6 +31,11 @@ int main(){
         }
     }
     bool visited[r][c];
+    for (int i = 0; i < r; ++i) {
+        for (int j = 0; j < c; ++j) {
+            visited[i][j] = false;
+        }
+    }
     int count=0;
     for (int i = 0; i < r; ++i) {
         if (!containsStrawberry(grid,i,c, 0)){
@@ -46,7 +53,7 @@ int main(){
                 if (!visited[j][i]){
                     count++;
                 }
-                visited[i][j]= true;
+                visited[j][i]= true;
             }
         }
     }
