@@ -1,6 +1,4 @@
 #include <iostream>
-#include <memory.h>
-
 using namespace std;
 bool containsStrawberry(char **grid,int x,int rc,int type){
     if (type==0){
@@ -58,5 +56,4 @@ int main(){
         }
     }
     cout<<count;
-
 }
