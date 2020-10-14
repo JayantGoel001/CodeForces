@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 int main(){
     ios_base::sync_with_stdio(false);
@@ -9,7 +8,6 @@ int main(){
     for (int i = 0; i < t; ++i) {
         int n;
         cin>>n;
-        vector<int> constant;
         long long  int *ar = new long long int[n];
         for (int j = 0; j < n; ++j) {
             cin>>ar[j];
