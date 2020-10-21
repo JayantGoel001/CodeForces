@@ -10,14 +10,15 @@ int main(){
         if (l1!=r2){
             cout<<l1<<" "<<r2<<"\n";
         } else if (r1!=l2){
-            cout<<l2<<" "<<r1<<"\n";
-        } else if (l1!=r1){
-            cout<<l1<<" "<<r1<<"\n";
-        } else if (l2!=r2){
-            cout<<l2<<" "<<r2<<"\n";
+            cout<<r1<<" "<<l2<<"\n";
         } else{
-            cout<<(l1+r1)/2<<" "<<(l2+r2)/2<<"\n";
+            ll a = (l1+r1)/2;
+            ll b = (l2+r2)/2;
+            if (a!=b) {
+                cout <<a<< " " <<b<< "\n";
+            }else{
+                cout<<a<<" "<<r2-b<<"\n";
+            }
         }
     }
-
 }
