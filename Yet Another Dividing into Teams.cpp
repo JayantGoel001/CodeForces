@@ -1,6 +1,5 @@
 #include <iostream>
 #include <algorithm>
-#include <vector>
 using namespace std;
 int main(){
     int q;
@@ -13,20 +12,16 @@ int main(){
             cin>>ar[j];
         }
         sort(ar,ar+n);
-        int no = 1;
-        vector<int> v;
-        for (int j = 0; j < n - 1; ++j) {
-            if (abs(ar[j+1]-ar[j])==1){
-                no++;
-            }else{
-                v.push_back(no);
-                no=0;
+        int c=0;
+        for (int j = 0; j < n-1; ++j) {
+            if (ar[j+1]-ar[j]==1){
+                c++;
+                cout<<"2\n";
+                break;
             }
         }
-        int minEle = INT32_MAX;
-        for (auto j = v.begin(); j!=v.end(); ++j) {
-            minEle = min(*j,minEle);
+        if (c==0){
+            cout<<"1\n";
         }
-        cout<<minEle<<"\n";
     }
 }

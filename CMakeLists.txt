@@ -1,4 +1,4 @@
 cmake_minimum_required(VERSION 3.13)
 project(..)
 set(CMAKE_CXX_STANDARD 14)
-add_executable(. Fence.cpp)
+add_executable(. "Yet Another Dividing into Teams.cpp")
