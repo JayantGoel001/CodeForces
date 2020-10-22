@@ -7,14 +7,14 @@ int main(){
         long long int n;
         int a,b;
         cin>>n>>a>>b;
-        if (a<=b || n==1){
+        if (a<=b/2 || n==1){
             cout<<n*a<<"\n";
         }
         else{
-            int cost = 0;
-            while (n%b!=0){
-                cost = cost + a;
-                n--;
+            long long int cost = 0L;
+            while (n%2!=0){
+                cost = cost + (long long int)a;
+                n-=1;
             }
             cost+=n*b/2;
             cout<<cost<<"\n";
