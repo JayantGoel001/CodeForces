@@ -11,9 +11,14 @@ int main(){
             cout<<n*a<<"\n";
         }
         else{
-            long long  int volumeA = a*1;
-            long long  int volumeB = b*2;
-
+            int cost = 0;
+            while (n%b!=0){
+                cost = cost + a;
+                n--;
+            }
+            cost+=n*b/2;
+            cout<<cost<<"\n";
         }
+
     }
 }
