@@ -11,8 +11,8 @@ int main(){
         int *ar = new int[n];
         long long int sum=0L;
         for (int j = 0; j < n; ++j) {
-            cin>>ar[i];
-            sum+=ar[i];
+            cin>>ar[j];
+            sum+=ar[j];
         }
         if (sum==m){
             cout<<"YES\n";
