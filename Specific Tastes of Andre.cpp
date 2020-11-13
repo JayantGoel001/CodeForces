@@ -8,11 +8,7 @@ int main(){
         cin>>n;
         int j=1;
         while (n--){
-            if (j==99){
-                j=1;
-            }
             cout<<j<<" ";
-            j = j+2;
         }
         cout<<"\n";
     }
