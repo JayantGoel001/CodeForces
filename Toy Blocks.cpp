@@ -11,13 +11,20 @@ int main(){
         cin>>n;
         ll ar[n];
         ll sum=0;
+        ll maxEl = -1;
         for (int j = 0; j < n; ++j) {
             cin>>ar[j];
             sum+=ar[j];
+            maxEl = max(maxEl,ar[j]);
         }
-        ll required = sum / n;
-
-
-
+        ll remainSum = sum-maxEl;
+        if (remainSum!=0 && remainSum%maxEl==0){
+            cout<<"0\n";
+        } else if (remainSum==0){
+            cout<<abs(remainSum-maxEl)<<"\n";
+        }
+        else{
+            cout<<abs(remainSum-maxEl)<<"\n";
+        }
     }
 }
