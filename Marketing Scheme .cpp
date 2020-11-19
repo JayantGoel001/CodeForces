@@ -6,11 +6,9 @@ int main(){
     for (int i = 0; i < t; ++i) {
         int l,r;
         cin>>l>>r;
-        int diff = r-l;
-        float a = r+diff;
-        if (l%(int)a >=a/2.0 && r%(int)a>=a/2.0){
+        if (2*l>r){
             cout<<"YES\n";
-        } else{
+        } else {
             cout<<"NO\n";
         }
     }
