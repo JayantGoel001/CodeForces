@@ -4,15 +4,19 @@ using namespace std;
 int main(){
     string str;
     cin>>str;
-    int q=0;
-    int a=0;
+    int count=0;
     for (int i = 0; i < str.length(); ++i) {
         if (str[i]=='Q'){
-            q++;
-        }
-        if (str[i]=='A'){
-            a++;
+            for (int j = i+1; j <str.length() ; ++j) {
+                if (str[j]=='A'){
+                    for (int k = j+1; k < str.length(); ++k) {
+                        if (str[k]=='Q'){
+                            count++;
+                        }
+                    }
+                }
+            }
         }
     }
-    cout<<(q-1)*a;
+    cout<<count;
 }
