@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
+#define ll long long int
 using namespace std;
 int main(){
-    int n,x;
+    ll n,x;
     cin>>n>>x;
     int distress=0;
     for (int i = 0; i < n; ++i) {
-        int di;
+        ll di;
         string ch;
         cin>>ch>>di;
         if (ch=="+"){
