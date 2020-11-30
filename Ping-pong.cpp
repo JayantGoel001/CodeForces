@@ -6,6 +6,6 @@ int main(){
     for (int i = 0; i < t; ++i) {
         int x,y;
         cin>>x>>y;
-        cout<<x-1<<" "<<y;
+        cout<<x-1<<" "<<y<<"\n";
     }
 }

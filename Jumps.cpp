@@ -1,26 +1,17 @@
 #include <iostream>
-#include <algorithm>
+#include <math.h>
 using namespace std;
-
 int main(){
     int t;
     cin>>t;
     for (int i = 0; i < t; ++i) {
         int x;
         cin>>x;
-        int k =1;
-        while (true){
-            int w= 0;
-            if (k%2==0){
-                w = (k-1)*(k)/2;
-            }
-            else{
-                w = (k-1)*((k-1)/2)+k;
-            }
-            if (w==x){
-                cout<<k<<"\n";
-                break;
-            }
+        int w = ceil((sqrt(8*x+1)-1)/2);
+        if (abs(x - w*(w+1)/2)==1){
+            cout<<w+1<<'\n';
+        } else{
+            cout<<w<<"\n";
         }
     }
 }
