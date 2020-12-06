@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
+#include <vector>
 using namespace std;
 int main(){
     int t;
@@ -9,24 +11,14 @@ int main(){
         cin>>n;
         string str;
         cin>>str;
-        string fixed = "trygub";
-        int count = 0;
-        int lastIndex=0;
-        for (int j = 0; j < 6; ++j) {
-            char x = fixed[j];
-            for (int k = lastIndex; k < n; ++k) {
-                if (x==str[k]){
-                    count++;
-                    lastIndex = k;
-                    break;
-                }
-            }
+        vector<char> v;
+        for (int j = 0; j < n; ++j) {
+            v.push_back(str[j]);
         }
-//        cout<<lastIndex<<" "<<count<<"\n";
-        if (count==6){
-            cout<<str.substr(lastIndex)+str.substr(0,lastIndex)<<"\n";
-        } else{
-            cout<<str<<"\n";
+        sort(v.begin(),v.begin()+n);
+        for (int j = 0; j <n; ++j) {
+            cout<<v[j];
         }
+        cout<<'\n';
     }
 }
