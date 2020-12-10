@@ -12,11 +12,11 @@ int main(){
     int a = 1;
     int b = 1;
     int c = 0;
-    while (c<=n){
+    while (c<=1000){
         c = a+b;
         a = b;
         b = c;
-        if (c<n) {
+        if (c<1000) {
             isFibonacci[c] = true;
         }
     }
