@@ -7,16 +7,9 @@ int main(){
     for (int i = 0; i < t; ++i) {
         ll a,b,c;
         cin>>a>>b>>c;
-        int x = (a+b+c)/7;
-        if (x<=min(a,min(b,c))){
-            a-=x;
-            b-=x;
-            c-=x;
-            if ((a+b+c+x)%7==0){
-                cout<<"YES\n";
-            } else{
-                cout<<"NO\n";
-            }
+        int x = (a+b+c)/9;
+        if (x<=min(a,min(b,c)) && (a+b+c)%9==0){
+            cout<<"YES\n";
         } else{
             cout<<"NO\n";
         }
