@@ -31,20 +31,30 @@ int main(){
                 }
                 ar[j]=b[j];
             } else{
-                int maxDiv = ceil((float)ar[j-1]/(float)ar[j]);
-                int minDiv = floor((float)ar[j-1]/(float)ar[j]);
-                int minDiff = ar[j-1] - minDiv*ar[j];
-                int maxDiff = maxDiv*ar[j] - ar[j-1];
-                if (maxDiff>=minDiff){
-                    b[j] = ar[j]-minDiff;
-                } else{
-                    b[j] = ar[j]+maxDiff;
+                ll inc = ar[j];
+                ll dec = ar[j];
+                ll count = 0;
+                while (true){
+                    if (ar[j-1]%inc==0){
+                        b[j] = inc;
+                        break;
+                    }else if (ar[j-1]%dec==0){
+                        b[j] = dec;
+                        break;
+                    }
+                    inc++;
+                    dec--;
+                    count++;
+                    if (count==ar[j-1]){
+                        b[j]=ar[j-1];
+                        break;
+                    }
                 }
                 ar[j] = b[j];
             }
         }
         for (int j = 0; j < n; ++j) {
-            cout<<b[j]<<" ";
+            cout<<ar[j]<<" ";
         }
         cout<<"\n";
     }
