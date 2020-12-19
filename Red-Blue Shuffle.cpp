@@ -20,32 +20,12 @@ int main(){
         for (int j = 0; j < n; ++j) {
             vblue.push_back((int)blue[j]);
         }
-        vector<int> countRed ;
-        vector<int> countBlue;
-        for (int j = 0; j < n; ++j) {
-            int count = 0;
-            for (int k = 0; k < n; ++k) {
-                if (vred[j]>vblue[k]){
-                    count++;
-                }
-            }
-            countRed.push_back(count);
-        }
-        for (int j = 0; j < n; ++j) {
-            int count = 0;
-            for (int k = 0; k < n; ++k) {
-                if (vred[j]<vblue[k]){
-                    count++;
-                }
-            }
-            countBlue.push_back(count);
-        }
         int countR = 0;
         int countB = 0;
         for (int j = 0; j < n; ++j) {
-            if (countRed[j]>countBlue[j]){
+            if (vred[j]>vblue[j]){
                 countR++;
-            } else if (countBlue[j]>countRed[j]){
+            } else if (vblue[j]>vred[j]){
                 countB++;
             }
         }
