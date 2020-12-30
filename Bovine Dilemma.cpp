@@ -18,12 +18,10 @@ int main(){
         set<float> st;
         for (int j = 0; j < n; ++j) {
             for (int k = j+1; k < n; ++k) {
-                float a = sqrt(1+pow(ar[j],2));
-                float b = sqrt(1+pow(ar[k],2));
-                float c = abs(ar[j]-ar[k]);
-                float s = (a+b+c)/2;
-                float areaSquare = round(s*(s-a)*(s-b)*(s-c)*100);
-                st.insert(areaSquare);
+                float areaSquare = abs(ar[k]-ar[j]);
+                if (areaSquare!=0) {
+                    st.insert(areaSquare);
+                }
             }
         }
         cout<<st.size()<<"\n";
