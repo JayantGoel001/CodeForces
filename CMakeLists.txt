@@ -1,4 +1,4 @@
 cmake_minimum_required(VERSION 3.13)
 project(..)
 set(CMAKE_CXX_STANDARD 14)
-add_executable(.  "Last minute enhancements.cpp")
+add_executable(. " a.cpp")
