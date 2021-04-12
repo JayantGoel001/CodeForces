@@ -17,7 +17,7 @@ int main(){
         for (int j = 0; j < n; ++j) {
             count[ar[j]]++;
         }
-        if ((count[1]%2==0 && count[2]%2==0) || (count[2]%2==1 && count[1]>2 && count[1]%2==0)){
+        if ((count[1]%2==0 && count[2]%2==0) || (count[2]%2==1 && count[1]>=2 && count[1]%2==0)){
             cout<<"YES\n";
         } else if (count[1]%2==1 ||(count[1]==0 && count[2]%2==1)){
             cout<<"NO\n";
