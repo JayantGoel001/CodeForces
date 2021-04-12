@@ -11,15 +11,15 @@ int main(){
         for (int j = 0; j < n; ++j) {
             cin>>ar[j];
         }
-        int candy[3];
-        candy[1]=0;
-        candy[2]=0;
+        int count[3];
+        count[1] = 0;
+        count[2] = 0;
         for (int j = 0; j < n; ++j) {
-            candy[ar[j]]+=1;
+            count[ar[j]]++;
         }
-        if ((candy[1]+2*candy[2])%2==0 ){
+        if ((count[1]%2==0 && count[2]%2==0) || (count[2]%2==1 && count[1]>2 && count[1]%2==0)){
             cout<<"YES\n";
-        } else{
+        } else if (count[1]%2==1 ||(count[1]==0 && count[2]%2==1)){
             cout<<"NO\n";
         }
     }
