@@ -8,8 +8,14 @@ int main(){
         int n,k;
         cin>>n>>k;
         vector<int> v;
-        for (int i = 1; i <=k/2 ; ++i) {
-            v.push_back(i);
+        if (k/2>k-k/2){
+            for (int i = 1; i <= k/2; ++i) {
+                v.push_back(i);
+            }
+        } else{
+            for (int i = k/2; i <k; ++i) {
+                v.push_back(i);
+            }
         }
         for (int i = k+1; i <=n; ++i) {
             v.push_back(i);
