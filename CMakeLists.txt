@@ -1,4 +1,4 @@
 cmake_minimum_required(VERSION 3.13)
 project(..)
 set(CMAKE_CXX_STANDARD 14)
-add_executable(. "Prison Break-1482A.cpp")
+add_executable(. Anti-knapsack.cpp)
