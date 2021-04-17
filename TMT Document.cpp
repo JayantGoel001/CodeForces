@@ -8,30 +8,53 @@ int main(){
         cin>>n;
         string str;
         cin>>str;
-        int countT1 = 0;
-        int countT2 = 0;
+        int countT = 0;
         int countM = 0;
-        bool result = false;
         for (int i = 0; i < str.length(); ++i) {
             if (str[i]=='T'){
-                countT1++;
-                countT2++;
+                countT++;
             } else{
                 countM++;
-                countT2=0;
-                if (countM>countT1){
-                    cout<<"NO\n";
-                    result = true;
-                    break;
-                }
             }
         }
-        if (!result){
-            if (countT2<=countM && 2*countM==countT1){
-                cout<<"YES\n";
+        if (countT == 2*countM){
+            int count = 0;
+            bool result = false;
+            for (int i = 0; i < str.length(); ++i) {
+                if (str[i]=='T'){
+                    count++;
+                } else{
+                    count--;
+                    if (count<0){
+                        result = true;
+                        break;
+                    }
+                }
+
+            }
+            if (!result){
+                count = 0;
+                bool no = false;
+                for (int i = str.length()-1; i >=0 ; i--) {
+                    if (str[i]=='T'){
+                        count++;
+                    } else{
+                        count--;
+                        if (count<0){
+                            cout<<"NO\n";
+                            no = true;
+                            break;
+                        }
+                    }
+                }
+                if (!no){
+                    cout<<"YES\n";
+                }
             } else{
                 cout<<"NO\n";
             }
+        } else{
+            cout<<"NO\n";
         }
     }
 }
