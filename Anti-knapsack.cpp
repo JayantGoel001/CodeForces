@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <set>
 using namespace std;
 int main(){
     int t;
@@ -7,22 +7,15 @@ int main(){
     while (t--){
         int n,k;
         cin>>n>>k;
-        vector<int> v;
-        if (k/2>k-k/2){
-            for (int i = 1; i <= k/2; ++i) {
-                v.push_back(i);
-            }
-        } else{
-            for (int i = k/2; i <k; ++i) {
-                v.push_back(i);
+        set<int> s;
+        for (int i = n; i >= 1; --i) {
+            if (!s.count(k-i) && i!=k){
+                s.insert(i);
             }
         }
-        for (int i = k+1; i <=n; ++i) {
-            v.push_back(i);
-        }
-        cout<<v.size()<<"\n";
-        for (int i = 0; i < v.size(); ++i) {
-            cout<<v[i]<<" ";
+        cout<<s.size()<<"\n";
+        for(auto it=s.begin(); it!=s.end();it++){
+            cout<<*it<<" ";
         }
         cout<<"\n";
     }
