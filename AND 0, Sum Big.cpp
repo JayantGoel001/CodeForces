@@ -12,11 +12,10 @@ int main(){
     while (t--){
         int n,k;
         cin>>n>>k;
-        ll mul = 1;
-        ll num = pow(2,k);
-        for (int i = 0; i < n; ++i) {
-            mul = (mul*num)%mod;
+        ll num = 1;
+        for (int i = 0; i < k; ++i) {
+            num = (num*n)%mod;
         }
-        cout<<(mul)*2<<"\n";
+        cout<<num<<"\n";
     }
 }
