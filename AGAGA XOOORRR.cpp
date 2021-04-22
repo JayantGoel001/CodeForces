@@ -15,33 +15,26 @@ int main(){
             cin>>ar[i];
         }
         ll x = ar[0];
-        vector<ll> v;
         for (int i = 1; i < n; ++i) {
             x = x ^ ar[i];
-            if (x==0){
-                v.push_back(ar[i]);
-                if (i+1<n){
-                    v.push_back(ar[i+1]);
-                }
-            }
         }
         if (x==0){
             cout<<"YES\n";
-        }else if (v.size()>0){
-            bool found = false;
-            int el = v[0];
-            for (auto i:v) {
-                if (i!=el){
-                    found = true;
-                    cout<<"NO\n";
-                    break;
+        }else{
+            int count = 0;
+            int cur = 0;
+            for (int i = 0; i < n; ++i) {
+                cur = cur^ar[i];
+                if (cur==x){
+                    count++;
+                    cur=0;
                 }
             }
-            if (!found){
+            if (count>2){
                 cout<<"YES\n";
+            } else {
+                cout << "NO\n";
             }
-        }else{
-            cout<<"NO\n";
         }
     }
 }
