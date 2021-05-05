@@ -1,5 +1,6 @@
 #include <iostream>
 #include <map>
+#define ll long long int
 using namespace std;
 int main(){
     ios_base::sync_with_stdio(false);
@@ -10,8 +11,8 @@ int main(){
         int n;
         cin>>n;
         int x;
-        map<int,int> mp;
-        int maxi = 0;
+        map<int,ll> mp;
+        ll maxi = 0;
         for (int i = 0; i < n; ++i) {
             cin>>x;
             maxi += mp[x-i];
