@@ -45,8 +45,8 @@ int32_t main(){
         }
     }
     int answer = 0;
-    for (int i = 1; i <=n; ++i) {
-        for (int j = 1; j <=m ; ++j) {
+    for (int i = 2; i <n; ++i) {
+        for (int j = 2; j <m ; ++j) {
             int x1 = start_boy[i-1][j] + end_boy[i+1][j] + start_girl[i][j-1] + end_girl[i][j+1];
             int x2 = start_boy[i][j-1] + end_boy[i][j+1] + start_girl[i+1][j] + end_girl[i-1][j];
             answer = max(answer, max(x1,x2));
