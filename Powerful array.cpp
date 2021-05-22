@@ -23,9 +23,9 @@ bool cmp(Query A,Query B){
         return A.l/BLOCK<B.l/BLOCK;
     }
     if ((A.l/BLOCK)%2==0){
-        return A.r<B.r;
-    } else{
         return A.r>B.r;
+    } else{
+        return A.r<B.r;
     }
 }
 void add(int index){
@@ -38,8 +38,8 @@ void remove(int index){
 }
 int32_t main(){
     ios_base::sync_with_stdio(false);
-//    cin.tie(NULL);
-//    cout.tie(NULL);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
     int n,t;
     scanf("%I64d %I64d",&n,&t);
