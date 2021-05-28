@@ -2,22 +2,15 @@
 #define int long long int
 using namespace std;
 int32_t main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
     int t;
     cin>>t;
     while (t--){
         int r,b,d;
         cin>>r>>b>>d;
-        int remaining;
-        if (r%b==0){
-            remaining = r-b;
-        } else if (b%r==0){
-            remaining = b - r;
-        } else if (r>b){
-            remaining = r -(r/b)*b;
-        } else{
-            remaining = b - (b/r)*r;
-        }
-        if (remaining<=d){
+        if (abs(r-b) <= d*min(r,b)){
             cout<<"YES\n";
         } else{
             cout<<"NO\n";
