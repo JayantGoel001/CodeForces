@@ -21,25 +21,15 @@ int32_t main(){
         for (int i = 0; i < n; ++i) {
             if (minEle>ar[i]){
                 minEle = ar[i];
-                minPos = i+1;
+                minPos = i;
             }
             if (maxEle<ar[i]){
                 maxEle = ar[i];
-                maxPos = i+1;
+                maxPos = i;
             }
         }
-        if (minPos>n/2 && maxPos>n/2){
-            minPos = n+1 - minPos;
-            maxPos = n+1 - maxPos;
-        }
-        int output ;
-        if (minPos<maxPos){
-            output = minPos;
-            output+= min(maxPos - minPos,n+1-maxPos);
-        } else{
-            output = maxPos;
-            output+= min(minPos - maxPos,n+1-minPos);
-        }
-        cout<<output<<"\n";
+        int mini = min(minPos,maxPos);
+        int maxi = max(maxPos,minPos);
+        cout<<min(maxi+1,min(mini+n+1-maxi,n-mini))<<"\n";
     }
 }
