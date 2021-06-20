@@ -23,7 +23,7 @@ int32_t main(){
         }
         sort(v.begin(), v.end());
         int i = 0;
-        while (!v.empty()){
+        while (!v.empty() && i<v.size()){
             if ((v[i]-1)/x<=k){
                 k-=(v[i]-1)/x;
                 i++;
