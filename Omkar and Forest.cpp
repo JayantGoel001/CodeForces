@@ -36,13 +36,16 @@ int32_t main() {
             }
         }
         int count = 0;
+        int x = 1;
         for (int i = 0; i < n; ++i) {
             for (int j = 0; j < m; ++j) {
                 if (ar[i][j]=='#'){
                     count++;
+                } else{
+                    x = 0;
                 }
             }
         }
-        cout<<(power(2,count,MOD) - count/(n*m) +MOD)%MOD<<"\n";
+        cout<<(power(2,count,MOD) - x +MOD)%MOD<<"\n";
     }
 }
