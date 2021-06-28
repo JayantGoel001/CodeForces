@@ -1,30 +1,40 @@
-#include <iostream>
+#include<bits/stdc++.h>
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
+#define int long long int
+#define INF 1e18
+using namespace __gnu_pbds;
 using namespace std;
-int main(){
-    int t;
-    cin>>t;
-    for (int i = 0; i < t; ++i) {
+template<typename T>
+using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+
+int GCD(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    return GCD(b, a % b);
+}
+int power(int x, int y, int MOD = INF) {
+    if (y == 0) {
+        return 1;
+    }
+    if (y % 2 == 0) {
+        return power((x * x) % MOD, y / 2) % MOD;
+    } else {
+        return (x * power((x * x) % MOD, (y - 1) / 2) % MOD) % MOD;
+    }
+}
+
+int32_t main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    int t = 1;
+    cin >> t;
+    while (t--) {
         int n,m,k;
-        cin>>n>>m>>k;
-        int dp[n+1][m+1];
-        for (int j = 0; j <=n; ++j) {
-            for (int l = 0; l <=m ; ++l) {
-                dp[j][l]= 0;
-            }
-        }
-        for (int j = 2; j <=n ; ++j) {
-            dp[j][1] = dp[j-1][1] + 1;
-        }
-        for (int j = 2; j <=m ; ++j) {
-            dp[1][j] = dp[1][j-1] + 1;
-        }
-        dp[1][1] = 0;
-        for (int j = 2; j <=n ; ++j) {
-            for (int l = j; l <=m ; ++l) {
-                dp[j][l] = min(dp[j - 1][l] + j, dp[j][l - 1]+l);
-            }
-        }
-        if (dp[n][m]==k){
+        cin >> n>>m>>k;
+        if (k==n*m-1){
             cout<<"YES\n";
         } else{
             cout<<"NO\n";
