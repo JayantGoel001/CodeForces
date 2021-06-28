@@ -1,61 +1,46 @@
-#include <iostream>
-#include <cmath>
+#include<bits/stdc++.h>
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
 
-#define ll long long int
+#define int long long int
+#define INF 1e18
+using namespace __gnu_pbds;
 using namespace std;
-int main(){
-    int t;
-    cin>>t;
-    for (int i = 0; i < t; ++i) {
+template<typename T>
+using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+
+int GCD(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    return GCD(b, a % b);
+}
+
+int power(int x, int y, int MOD = INF) {
+    if (y == 0) {
+        return 1;
+    }
+    if (y % 2 == 0) {
+        return power((x * x) % MOD, y / 2) % MOD;
+    } else {
+        return (x * power((x * x) % MOD, (y - 1) / 2) % MOD) % MOD;
+    }
+}
+
+int32_t main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    int t = 1;
+    cin >> t;
+    while (t--) {
         int n;
         cin >> n;
-        ll ar[n];
-        ll sum = 0;
-        for (int j = 0; j < n; ++j) {
-            cin >> ar[j];
-            sum += ar[j];
+        int ar[n];
+        for (int i = 0; i < n; ++i) {
+            cin>>ar[i];
+            cout<<power(2,__lg(ar[i]))<<" ";
         }
-        ll b[n];
-        for (int j = 0; j < n; ++j) {
-            if(j==0){
-                b[j]=ar[j];
-            } else if (ar[j]>=ar[j-1]){
-                int maxDiv = ceil((float)ar[j]/(float)ar[j-1]);
-                int minDiv = floor((float)ar[j]/(float)ar[j-1]);
-                int minDiff = ar[j] - minDiv*ar[j-1];
-                int maxDiff = maxDiv*ar[j-1] - ar[j];
-                if (maxDiff>=minDiff){
-                    b[j] = minDiv*ar[j-1];
-                } else{
-                    b[j] = maxDiv*ar[j-1];
-                }
-                ar[j]=b[j];
-            } else{
-                ll inc = ar[j];
-                ll dec = ar[j];
-                ll count = 0;
-                while (true){
-                    if (ar[j-1]%inc==0){
-                        b[j] = inc;
-                        break;
-                    }else if (ar[j-1]%dec==0){
-                        b[j] = dec;
-                        break;
-                    }
-                    inc++;
-                    dec--;
-                    count++;
-                    if (count==ar[j-1]){
-                        b[j]=ar[j-1];
-                        break;
-                    }
-                }
-                ar[j] = b[j];
-            }
-        }
-        for (int j = 0; j < n; ++j) {
-            cout<<ar[j]<<" ";
-        }
-        cout<<"\n";
+        cout << "\n";
     }
 }
