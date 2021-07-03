@@ -27,32 +27,33 @@ int power(int x, int y, int MOD = INF) {
         return (x * power((x * x) % MOD, (y - 1) / 2) % MOD) % MOD;
     }
 }
-bool plusMultiply(int n,int a,int b,int *dp){
-    if(n==1 || a==1 || n==0){
-        dp[n] = true;
-        return true;
-    }
-    dp[n] = false;
-    cout<<n<<"\n";
-    if (n%a==0){
-        dp[n] = dp[n] || plusMultiply(n/a,a,b,dp);
-    }
-    if (n-b>=0){
-        dp[n] = dp[n] || plusMultiply(n-b,a,b,dp);
-    }
-    return dp[n];
-}
 int32_t main() {
-//    ios_base::sync_with_stdio(false);
-//    cin.tie(nullptr);
-//    cout.tie(nullptr);
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
     int t = 1;
     cin >> t;
     while (t--) {
         int n,a,b;
         cin >> n>>a>>b;
-        int *dp = new int[n+1];
-        cout<<plusMultiply(n,a,b,dp);
+        if ((a==1 && n%b==1) || (b==1)){
+            cout<<"Yes";
+        } else if (a==1 && n%b!=1){
+            cout<<"No";
+        } else{
+            bool found = false;
+            for (int i = 1; i <=n ; i*=a) {
+                if ((n-i)%b==0){
+                    found = true;
+                    break;
+                }
+            }
+            if (found){
+                cout<<"Yes";
+            } else{
+                cout<<"No";
+            }
+        }
         cout << "\n";
     }
 }
