@@ -44,7 +44,6 @@ int32_t main() {
         } else{
             cout<<b-a<<" "<<min(b%(b-a),(b-a) - b%(b-a));
         }
-
         cout << "\n";
     }
 }
