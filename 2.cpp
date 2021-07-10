@@ -37,7 +37,37 @@ int32_t main() {
     while (t--) {
         string str;
         cin >> str;
-
+        int indexA = -1;
+        for (int i = 0; i < str.length(); ++i) {
+            if (str[i]=='a'){
+                indexA = i;
+                break;
+            }
+        }
+        if (indexA==-1){
+            cout<<"NO";
+        } else{
+            char val = 'a';
+            int left = indexA;
+            int right = indexA;
+            bool found = true;
+            for (int i = 1; i <str.length() ; ++i) {
+                if (0<=left-1 && str[left-1] == val+1){
+                    left-=1;
+                } else if (right+1<str.length() && str[right+1] == val+1){
+                    right+=1;
+                } else{
+                    found = false;
+                    break;
+                }
+                val+=1;
+            }
+            if (found){
+                cout<<"YES";
+            } else{
+                cout<<"NO";
+            }
+        }
         cout << "\n";
     }
 }
