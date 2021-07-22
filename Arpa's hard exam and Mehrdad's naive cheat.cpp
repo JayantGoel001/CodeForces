@@ -33,12 +33,16 @@ int32_t main() {
     while (t--) {
         int n;
         cin >> n;
-        int ar[4];
-        ar[0] = 8;
-        ar[1] = 4;
-        ar[2] = 2;
-        ar[3] = 6;
-        cout<<ar[(n-1)%4];
+        if(n==0){
+            cout<<"1";
+        }else{
+            int ar[4];
+            ar[0] = 8;
+            ar[1] = 4;
+            ar[2] = 2;
+            ar[3] = 6;
+            cout<<ar[(n-1)%4];
+        }
         cout << "\n";
     }
 }
