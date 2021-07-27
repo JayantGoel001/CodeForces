@@ -9,23 +9,6 @@ using namespace std;
 template<typename T>
 using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
-int GCD(int a, int b) {
-    if (b == 0) {
-        return a;
-    }
-    return GCD(b, a % b);
-}
-
-int power(int x, int y, int MOD = INF) {
-    if (y == 0) {
-        return 1;
-    }
-    if (y % 2 == 0) {
-        return power((x * x) % MOD, y / 2) % MOD;
-    } else {
-        return (x * power((x * x) % MOD, (y - 1) / 2) % MOD) % MOD;
-    }
-}
 
 int32_t main() {
     ios_base::sync_with_stdio(false);
@@ -36,10 +19,7 @@ int32_t main() {
     while (t--) {
         int n;
         cin >> n;
-        int ar[n];
-        for (int i = 0; i < n; ++i) {
-            cin>>ar[i];
-            cout<<power(2,__lg(ar[i]))<<" ";
+        cout<<ceil(sqrt(n));
         }
         cout << "\n";
     }
